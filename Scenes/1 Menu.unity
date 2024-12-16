@@ -273,7 +273,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 320491309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d9f2c8354c91db479fa884cdd877051, type: 3}
+  m_Script: {fileID: 11500000, guid: cbfa141ff29aaf14aab3c661ca0e67d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &345390755
@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 345390759}
   - component: {fileID: 345390758}
   - component: {fileID: 345390757}
+  - component: {fileID: 345390760}
   m_Layer: 5
   m_Name: EXIT
   m_TagString: Untagged
@@ -360,7 +361,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 320491314}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: PassScene, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -409,6 +410,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345390755}
   m_CullTransparentMesh: 1
+--- !u!114 &345390760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345390755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfa141ff29aaf14aab3c661ca0e67d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &746981582
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +775,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 320491314}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: PassScene, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -820,7 +833,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1356734279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ae74e90824e894a8904b7b6d306685, type: 3}
+  m_Script: {fileID: 11500000, guid: cbfa141ff29aaf14aab3c661ca0e67d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1537638669
