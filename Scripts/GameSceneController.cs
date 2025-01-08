@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class GameSceneController : MonoBehaviour
 {
-    public GameObject[] characterPrefabs; // Array de prefabs de personajes
-    public Vector3[] spawnPositions;      // Array de posiciones de aparición
+    public GameObject[] characterPrefabs;
+    public Vector3[] spawnPositions;
 
     void Start()
     {
-        InstantiateCharacter("Player1", 0);
-        InstantiateCharacter("Player2", 1);
-        InstantiateCharacter("Player3", 2);
-        InstantiateCharacter("Player4", 3);
+        int selectedCharacterIndex = PlayerPrefs.GetInt("SelectedCharacter", 0); // Obtener índice del personaje seleccionado
+        InstantiateCharacter(selectedCharacterIndex);
     }
 
-    void InstantiateCharacter(string playerPrefKey, int spawnIndex)
+    void InstantiateCharacter(int characterIndex)
     {
-        int selectedCharacterIndex = PlayerPrefs.GetInt(playerPrefKey);
-        Vector3 spawnPosition = spawnPositions[spawnIndex]; // Posición específica para cada jugador
-        Instantiate(characterPrefabs[selectedCharacterIndex], spawnPosition, Quaternion.identity);
+        Vector3 spawnPosition = spawnPositions[characterIndex];
+        Instantiate(characterPrefabs[characterIndex], spawnPosition, Quaternion.identity);
     }
 }

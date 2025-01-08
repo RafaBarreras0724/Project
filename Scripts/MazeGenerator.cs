@@ -6,8 +6,8 @@ public class MazeGenerator : MonoBehaviour
 {
     [SerializeField] MazeNode nodePrefab;
     [SerializeField] Vector2Int mazeSize;
-    [SerializeField] GameObject entryPrefab;  // Prefab para la entrada
-    [SerializeField] GameObject exitPrefab;   // Prefab para la salida
+    [SerializeField] GameObject entry;  
+    [SerializeField] GameObject exit;   
 
     private List<MazeNode> nodes;
     private MazeNode entryNode;
@@ -125,9 +125,9 @@ public class MazeGenerator : MonoBehaviour
     {
         // Configurar la entrada y salida
         entryNode = nodes[0];
-        Instantiate(entryPrefab, entryNode.transform.position, Quaternion.identity, transform);
+        Instantiate(entry, entryNode.transform.position, Quaternion.identity, transform);
 
         exitNode = nodes[nodes.Count - 1];
-        Instantiate(exitPrefab, exitNode.transform.position, Quaternion.identity, transform);
+        Instantiate(exit, exitNode.transform.position, Quaternion.identity, transform);
     }
 }
